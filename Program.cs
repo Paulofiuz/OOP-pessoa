@@ -1,25 +1,28 @@
-﻿Pessoa p1 = new Pessoa();
-p1.Nome = "Maria";
-p1.Idade = 25;
-p1.Sexo = "Feminino";  
-
-Pessoa p2 = new Pessoa();
-p2.Nome = "João";
-p2.Idade = 30;
-p2.Sexo = "Masculino";
-
-Pessoa p3 = new Pessoa();
-p3.Nome = "Ana";
-p3.Idade = 22;
-p3.Sexo = "Feminino";
-
-Console.WriteLine($"{p1.Nome}, {p1.Idade}, {p1.Sexo}");
-Console.WriteLine($"{p2.Nome}, {p2.Idade}, {p2.Sexo}");
-Console.WriteLine($"{p3.Nome}, {p3.Idade}, {p3.Sexo}");
-
-class Pessoa
+﻿internal class Program
 {
-    public string? Nome;
-    public int Idade;
-    public string? Sexo;
+    private static void Main(string[] args)
+    {
+        Aluno aluno = new Aluno("Paulo", 28, "Masculino", "Sim");
+        System.Console.WriteLine(aluno.Nome);
+        System.Console.WriteLine(aluno.Idade);
+        System.Console.WriteLine(aluno.Sexo);
+        System.Console.WriteLine(aluno.Aprovado);
+    }
+}
+
+public class Aluno
+{
+    public Aluno(string nome, int idade, string sexo, string aprovado)
+    {
+        Nome = nome; '
+        Idade = idade;
+        Sexo = sexo;
+        Aprovado = aprovado;
+    }
+
+    // Atributos
+    public string? Nome { get; set; } 
+    public int Idade { get; set; }
+    public string? Sexo { get; set; }
+    public string? Aprovado { get; set; }
 }
